@@ -1,0 +1,53 @@
+[root@yasirpc yasir]# git config --global user.name yasir
+[root@yasirpc yasir]# git config --global user.name
+yasir
+[root@yasirpc yasir]# git config --global user.email yasirzia80@gmail.com
+
+git init // this command initilize the directory and create a hidden file .git. now this directory can be use and benefit of git
+git status // this commands tells the status of your files
+which file you want to track must be add first
+git add filename
+git add -A // if you want to track all files and directories
+git reset // this command remove all files from staging areas and dont modified the file
+git status // now git tell the status of the files which you have added.
+git commit -m "added"   // when you commit check that files are valid and correct. before commiting you should add the file. git add filename and git commit -m "commiting the file"
+git checkout filename // if file is wrongly modified and not commited then you can back the previous file using this command
+git checkout -f // if all files are modified wrongly then you can back to previous using this command
+git log //
+git log -p -1  //show the last 1 log commit
+git diff // tell the difference between modified file and the stagged file
+git diff --staged // compare the last commit. Not working. dont understand
+git rm --cached filename // if you want to remove or deattached the file from git stagging area
+git rm filename   // delete the file from hard-disk and also from stagging area
+git status // tell the branch name, show untracked files etc
+git status -s //tell the short and breif info about modified files and untracked files
+git status -s // green M mean file modified in the staging area and red M mean file modified in the working tree
+
+if you want to ignore some file. so you can create the .gitignore file then add the files and directories which you want to ignore. for files write /mylogs.log or *.log for directory mydirectory/
+
+master branch is the main branch for your project, if you do some changing that effect the project then its very harmful. so to avoid this you can create other branches.
+git branch feature1 // now feature1 create. git branch  // this commands shows the total branches
+git checkout feature1  // now you switched to featrue1 branch. when you change the files in the branch does not effect the master branch files. when you add successfully add the new featrue in the app or project. then you can merge these all files to master branche.
+git checkout master then git merge feature1  // merging the featrue branch into master branch.
+git checkout -b feature2  // create feature2 branch and also get into featrue2 branch
+
+how to push local repository to github repository
+first login into github then create new repositroy. Then client on code button and copy the https link in the code button
+git remote add origin https://github.com/yasiraulakh1/git-hub-commonly-use-commands.g // now run this command
+git remote //now show origin. link merge with origin
+git remote -v // show the links for fetch and push
+git push origin master  // now you are push master repository to origin
+
+if you want to push other branch then
+git checkout feature1
+git push origin feature1 // now feature1 uploaded on github
+
+git push -u origin master // now with -u. after this you cant specify orgin master. you simply do git push and its automatically git push origin master do.
+
+git clone paste_the_url_which_repository_you_want_in_your_local_directory 
+
+
+
+
+
+
